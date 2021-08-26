@@ -1,0 +1,1395 @@
+
+
+
+:root {
+   
+    --color: #fff;
+    --background:#83A95C;
+
+--green-code: #177129;
+--dark-green: #115521;
+--footer-green: #197b30;
+--font-family : 'Popins'
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f6ff;
+  }
+
+ 
+
+  #header{
+     
+      padding: 15px;
+  }
+
+  .row1{
+      display: flex;
+  }
+
+a{
+text-decoration: none;
+  }
+
+  #header i{
+      color: var(--color);
+  }
+
+  #header a{
+    color: var(--color);
+    padding: 5px;
+  }
+
+  hr{
+    margin-top: 0;
+    position: relative;
+    border: 1px solid var(--color);
+    margin-bottom: 0;
+  }
+
+  .fa-user{
+    
+  
+    border-radius: 50%;
+    border: 1px solid var(--color);;
+    padding: 10px;
+
+  }
+
+  /* head back ground  */
+
+  .head{
+    background-image: url(../img/home\ page\ banner\ background.png);
+    background-size: cover;
+
+  }
+
+
+  
+  .container-top{
+     
+}
+
+
+#nav a{
+  color: var(--color);
+  padding: 10px;
+}
+
+#nav input{
+  background: var(--background);
+  outline: white;
+  border-radius: 50px;
+  border: 1px solid var(--color);
+}
+
+
+#nav ::placeholder {
+  color: var(--color);
+  padding-left: 10px;
+}
+
+.fa-search{
+    margin-left: -30px;
+    color: white;
+}
+
+.row2{
+  display: flex;
+  padding-top: 25px;
+  justify-content: center;
+}
+
+.e2{
+    background: var(--background);
+}
+
+#nav img{
+  margin-left: -120px;
+}
+
+/* top margin */
+
+.log1 {
+    margin-left: 120px;
+}
+.con{
+    margin-left: 50px;
+}
+
+.log {
+    margin-left: 130px;
+}
+.menu {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+/*  -----------------         select box    and search box  ---------------------- */
+
+
+
+
+.container-select {
+  margin-top: 100px;
+  padding: 8px;
+  background: rgb(45, 151, 45) ;
+  width: 62%;
+
+}
+
+.row-search{
+  display: flex;
+}
+
+.select-box {
+  position: relative;
+  display: flex;
+  width: 280px;
+  flex-direction: column;
+
+
+}
+.select-box:last-child{
+border-right: none;
+}
+.select-box .options-container {
+  background: rgb(59, 138, 59);
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+
+  position: absolute;
+  z-index: 100;
+}
+
+.selected {
+  background: rgb(59, 138, 59);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("../img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  margin-top: 104px;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: green;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: green;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+/* Searchbox */
+
+.search-box input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  border-radius: 8px 8px 0 0;
+  z-index: 100;
+  border: 8px solid green;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+.select-box .options-container.active ~ .search-box input {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* for button head  */
+
+.b2{
+  background: honeydew;
+  padding: 12px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  color: green;
+}
+
+.b2:hover{
+  color: #f5f6fa;
+  background: transparent;
+  border: 2px solid white;
+}
+
+/* change position  serch and multiple select  */
+
+
+.container-select{
+  margin-left: 230px;
+}
+
+
+
+
+
+
+
+
+/* head icon  */
+
+.icon-head i{
+  color: black;
+  background: #115521;
+  color: #fff;
+  width: 80px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 30px;
+ 
+}
+
+
+.icon-head{
+  margin-top: -100px;
+  position: absolute;
+  margin-left: 220px;
+}
+
+
+
+
+
+
+/* -----------------Hero slider -------------------------- */
+
+.mySlides2 {display: none}
+
+
+
+
+/* Slideshow container */
+.slideshow-container2 {
+  
+  position: relative;
+  
+}
+
+/* Next & previous buttons */
+.prev2, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  width: 50px;
+  padding: 0px 35px;
+  
+  color:green;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: 2px 2px 5px gray;
+  background: white;
+}
+
+/* Position the "next button" to the right */
+
+
+
+.prev2 {
+     
+     margin-left: 200px;
+}
+
+.next2{
+   margin-left: 330px;
+}
+
+
+.hero-active2 {
+    
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+ .prev2:hover, .next2:hover {
+  background-color: green;
+  color: #fff;
+}
+
+/* Caption text */
+.text2 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext2 {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active2, .dot2:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade2 {
+  -webkit-animation-name: fade2;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade2;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade2 {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade2 {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev2, .next2,.text2 {font-size: 11px}
+}
+
+
+.hero-btn{
+  color: #fff;
+  margin-top: 100px;
+  
+}
+
+.hero-btn h2{
+  font-size: 40px;
+}
+/* ----------------- End Hero slider -------------------------- */
+
+
+/* card section  */
+
+
+.row-card {
+  display: flex;
+  
+}
+
+.t1{
+  background: var(--color);
+  height: 140px;
+  margin-right: 20px;
+ 
+  border-radius: 10px;
+  box-shadow: 5px 0 15px gray;
+  width: 100px;
+  color: #000;
+
+}
+
+.row-card img{
+
+  font-size: 50px;
+ 
+  color: #83A95C;
+  
+}
+
+.t1:hover , .t1:focus {
+  background: green;
+  color: #fff;
+}
+
+.row-card a{
+  text-decoration: none;
+}
+.row-card img:hover{
+  background: green;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* form  */
+
+
+
+
+.form-1 input[type=text], .form-1 input[type=phone], .form-1 input[type=email], .form-1 textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-bottom: 2px solid #999;
+  font-weight: 600;
+
+}
+
+.form-1 input[type=submit] {
+  background-color: var(--dark-green);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-1 textarea {
+  resize: none;
+}
+.form-1 input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.for-1 img{
+
+  margin-top: 130px;
+  
+}
+
+ input[type=text]:focus, input[type=phone]:focus, input[type=email]:focus, textarea:focus {
+
+ 
+    outline: none;
+
+}
+
+
+/* form end   */
+
+
+
+
+/* counter  */
+
+
+
+
+
+
+/* counter start   */
+
+.counter-1{
+  background-image: url("../img/icon/counter\ section\ bg.png");
+  background-size: cover;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  padding-top: 80px;
+}
+
+
+.wrapper{
+  padding: 20px 50px;
+}
+.wrapper .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.wrapper p{
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
+
+
+
+
+
+.counter-up .content{
+  z-index: 1;
+  
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.counter-up .content .box{
+  
+ 
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content .box .counter{
+  font-size: 50px;
+  font-weight: 500;
+  color: #f2f2f2;
+  font-family: sans-serif;
+}
+.content .box .text{
+  font-weight: 400;
+  color: #ccc;
+}
+@media screen and (max-width: 1036px) {
+  .counter-up{
+    padding: 50px 50px 0 50px;
+  }
+  .counter-up .content .box{
+    width: calc(50% - 30px);
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .counter-up .content .box{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper{
+    padding: 20px;
+  }
+  .counter-up{
+    padding: 30px 20px 0 20px;
+  }
+}
+
+
+/* counter end   */
+
+
+
+
+
+/* news alart  Why choose us start   */
+
+
+
+
+/* news alart  Why choose us    end  */
+
+
+
+
+
+
+/* ----------------------- review start ------------- -- */
+
+
+/* review  */
+
+
+.t3{
+ 
+  margin-right: 10px;
+   border-radius: 10px;
+   box-shadow: 5px 0 15px gray;
+ 
+   color: #000;
+ 
+ }
+ 
+ 
+ #review{
+ 
+   padding: 50px 0;
+ }
+ 
+ 
+ #user img{
+ 
+   border-radius: 50%;
+ }
+ 
+ #user .icon i{
+   color: chocolate;
+ }
+ 
+
+ #user hr{
+  border: 1px solid green;
+  margin-bottom: 2px;
+ }
+
+ 
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+.testimonial {
+  position: relative;
+  padding:  0;
+  margin: 0 200px;
+ 
+}
+
+.testimonial .container {
+  padding: 0;
+  width: 800px;
+ 
+}
+
+.testimonial .testimonial-item {
+  position: relative;
+ 
+  text-align: center;
+  width: 200px;
+}
+
+.testimonial .testimonial-img {
+  position: relative;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+.testimonial .testimonial-item img {
+  margin: 0 auto;
+  width: 10px;
+  padding: 3px;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, .07);
+  background: #ffffff;
+  transition: .5s;
+}
+
+.testimonial .testimonial-text {
+  position: relative;
+ 
+  padding: 15px 0px 5;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, .07);
+}
+
+.testimonial .testimonial-item p {
+  font-size: 16px;
+  color: #666666;
+}
+
+.testimonial .testimonial-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.testimonial .testimonial-text h4 {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.testimonial .owl-item.center img {
+  border-color: transparent;
+}
+
+.testimonial .owl-item.center .testimonial-text {
+  background: green;
+}
+
+.testimonial .owl-item.center .testimonial-text h3 {
+  color: #F7CAC9;
+}
+
+.testimonial .owl-item.center .testimonial-text p,
+.testimonial .owl-item.center .testimonial-text h4 {
+  color: #ffffff;
+}
+
+
+
+
+.testimonial .owl-dots {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.testimonial .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  /* background: #F7CAC9; */
+  background:gray;
+}
+
+.testimonial .owl-dot.active {
+  background: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+.testimonial .owl-nav {
+  width: 250px;
+  
+  display: flex;
+  margin-top: 50px;
+}
+
+.testimonial .owl-nav .owl-prev,
+.testimonial .owl-nav .owl-next {
+ 
+  
+  width: 60px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  background: #FFF;
+  font-size: 22px;
+  transition: .3s;
+  box-shadow: 5px 5px 10px gray;
+}
+
+.testimonial .owl-nav .owl-prev{
+  position: absolute;
+  margin-left: 280px;
+  width: 60px;
+  margin-top: 15px;
+}
+
+.testimonial .owl-nav .owl-next{
+
+
+margin-top: 18px;
+  margin-left: 450px;
+  width: 60px;
+  position: absolute;
+}
+
+
+.testimonial .owl-nav .owl-prev:hover,
+.testimonial .owl-nav .owl-next:hover {
+  color: #fff;
+  background: green;
+}
+
+
+
+/* ------------------------ review end  ----------- */
+
+
+
+
+
+/* <!-- -----------------new article  start  ----------- --> */
+
+
+
+/* <!-- -----------------new article  end  ----------- --> */
+
+
+
+
+
+
+/* <!---------- frequently asked question and accordoin start    -------------> */
+
+
+/*  frequently asked question  - */
+
+#question{
+  margin-top: 100px;
+}
+
+.ask-img{
+  background-image: url(" ../img/faq\ side\ text\ bg.png");
+ background-size: cover;
+ max-width: 300px;
+
+
+  
+}
+
+
+.ask-img p{
+  margin: 20px;
+  color: #fff;
+}
+
+
+
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #fff;
+  float: right;
+  background: var(--dark-green);
+  border-radius: 50px;
+  
+}
+
+.active2:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+
+/* <!---------- frequently asked question and accordoin end    -------------> */
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact-us   */
+
+
+
+.contact-us input[type=text], 
+.contact-us input[type=phone], 
+.contact-us input[type=email], 
+.contact-us textarea {
+  width: 45%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+ 
+  box-shadow: 1px 0px 5px gray;
+  font-weight: 600;
+  
+}
+
+ textarea {
+  resize: none;
+}
+
+.contact-us input[type=submit] {
+  background-color: var(--dark-green);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-us input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/* footer  Part */
+
+
+#total{
+  background-image: url(../img/footer\ bg.png);
+  background-size: cover;
+  margin-top: 50px;
+
+ 
+}
+
+.foot {
+  background: white;
+  box-shadow: 5px 10px 15px gray;
+  height: 200px;
+  margin-top: 50px;
+}
+
+
+
+#total .foot input[type=text]{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+#total .foot input[type=submit] {
+  background-color:var(--dark-green);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+#total .foot input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+#total .foot input[type=text]:focus {
+
+  outline: none;
+}
+
+
+/* footer links  */
+
+
+
+#down  input[type=submit]  {
+  background-color:var(--footer-green);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  
+}
+
+
+#down {
+  padding-top: 100px;
+}
+
+
+
+#down .service  input[type=submit]  {
+
+  width: 350px;
+ 
+  
+  
+}
+
+#down li {
+  list-style-type: circle;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px;
+  font-weight: 200;
+}
+
+#down li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#down h1{
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 40px;
+}
+
+#down h1::first-letter{
+  font-size: 100px;
+  color: #45a049;
+  
+}
+
+#down .head-p{
+ margin-top: -25px;
+ margin-left: 130px;
+ color: #fff;
+
+}
+#down p{
+  color: #fff;
+  font-family: 'Popins';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+#down span{
+  margin-left: 22px;
+}
+
+.bottom p ,a{
+  color: #fff;
+  font-size: 14px;
+}
+.bottom a{
+  text-decoration: none;
+}
+
+
+
+.item{
+  width: 100px;
+  height: 100px;
+  background: #115521;
+}
+
+
+
+
+
+
+
+/* review  */
+
+/* slide 3  */
+
+.mySlides3 {display: none}
+
+
+
+
+/* Slideshow container */
+.slideshow-container3 {
+ 
+ position: relative;
+ 
+}
+
+/* Next & previous buttons */
+.prev3, .next3 {
+  cursor: pointer;
+  position: absolute;
+  top: 125%;
+  width: 50px;
+  padding: 0px 35px;
+  
+  color:green;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: 2px 2px 5px gray;
+  background: white;
+}
+
+/* Position the "next button" to the right */
+
+
+
+.prev3 {
+    
+    margin-left: 530px;
+}
+
+.next3{
+  margin-left: 730px;
+}
+
+
+.hero-active2 {
+   
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev3:hover, .next3:hover {
+ background-color: #115521;
+ color: #fff;
+}
+
+/* Caption text */
+.text3 {
+ color: #f2f2f2;
+ font-size: 15px;
+ padding: 8px 12px;
+ position: absolute;
+ bottom: 8px;
+ width: 100%;
+ text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext3 {
+ color: #f2f2f2;
+ font-size: 12px;
+ padding: 8px 12px;
+ position: absolute;
+ top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot3 {
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease;
+ margin-top: 30px;
+}
+
+.active3, .dot3:hover {
+ background-color: #115521;
+}
+
+/* Fading animation */
+.fade3 {
+ -webkit-animation-name: fade3;
+ -webkit-animation-duration: 1.5s;
+ animation-name: fade3;
+ animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade3 {
+ from {opacity: .4} 
+ to {opacity: 1}
+}
+
+@keyframes fade3 {
+ from {opacity: .4} 
+ to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+ .prev3, .next3,.text3 {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* news slider  */
+
+
+
+
+
+
+/* slide 4  */
+
+.mySlides4 {display: none}
+
+
+
+
+/* Slideshow container */
+.slideshow-container4 {
+ 
+ position: relative;
+ 
+}
+
+/* Next & previous buttons */
+.prev4, .next4 {
+  cursor: pointer;
+  position: absolute;
+  top: 108%;
+  width: 50px;
+  padding: 0px 35px;
+  
+  color:#115521;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: 2px 2px 5px gray;
+  background: white;
+}
+
+/* Position the "next button" to the right */
+
+
+
+.prev4 {
+    
+    margin-left: 120px;
+}
+
+.next4{
+  margin-left: 350px;
+}
+
+
+.hero-active2 {
+   
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev4:hover, .next4:hover {
+ background-color: #115521;
+ color: #fff;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot4 {
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease;
+}
+
+.active4, .dot4:hover {
+ background-color: #115521;
+}
+
+/* Fading animation */
+.fade4 {
+ -webkit-animation-name: fade4;
+ -webkit-animation-duration: 1.5s;
+ animation-name: fade4;
+ animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade4 {
+ from {opacity: .4} 
+ to {opacity: 1}
+}
+
+@keyframes fade4 {
+ from {opacity: .4} 
+ to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+ .prev4, .next4,.text4 {font-size: 11px}
+}
